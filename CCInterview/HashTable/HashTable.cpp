@@ -39,13 +39,13 @@ std::string& HashTable::operator[](const std::string key) {
     return retP->mValue;
 }
 
-int HashTable::hash(const std::string key) {
+int HashTable::hash(const std::string key) const {
     int hkey = 0;
     std::for_each(key.begin(),key.end(),[&hkey](const char&x){ hkey += x; });
     return hkey;
 }
 
-bool HashTable::find(const std::string key) {
+bool HashTable::find(const std::string key) const {
     int index = hash(key) % mStorageSize;
     if( mStorage[index] == nullptr )
         return false;

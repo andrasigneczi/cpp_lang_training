@@ -22,12 +22,12 @@ public:
     HashTable();
     ~HashTable();
     std::string& operator[](const std::string key);
-    bool find(std::string key);
+    bool find(const std::string key) const;
     bool remove(const std::string key);
     int keyCount() const {return mKeyCount; }
     
 private:
-    int hash(std::string key);
+    int hash(std::string key) const;
     
     std::array<Item*,mStorageSize> mStorage;
     int mKeyCount;
