@@ -8,6 +8,7 @@ T Stack<T>::pop() {
         mHead = mHead->mNext;
         T retV = x->mValue;
         delete x;
+        --mSize;
         return retV;
     }
     throw std::string("Stack is empty");
