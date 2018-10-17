@@ -6,13 +6,13 @@
 
 template<class T>
 class Stack {
-public:
     struct Node {
         Node() : mNext(nullptr), mValue(0) {}
         Node* mNext;
         T     mValue;
     };
     
+public:
     Stack() : mSize(0), mHead(nullptr) {}
     ~Stack();
     T pop();
