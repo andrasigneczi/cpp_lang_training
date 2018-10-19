@@ -1,0 +1,40 @@
+c++ std questions
+    map
+    queue
+    dequeue
+    vector
+    array
+    stack
+    thread
+    future
+    promise
+    task
+    chrono
+design pattern questions
+    factory
+    abstract factory
+    singleton
+    builder
+    prototype
+    adapter
+    bridge
+    filter/criteria
+    composite
+    decorator
+    facade
+    flyweight
+    proxy
+    chain of responsibility
+    command
+    interpreter
+    iterator
+    mediator
+    memento
+    observer
+    state
+    null
+    strategy
+    template
+    visitor
+    mvc
+    
