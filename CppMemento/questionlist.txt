@@ -10,6 +10,7 @@ c++ std questions
     promise
     task
     chrono
+    string
 design pattern questions
     factory
     abstract factory
@@ -38,3 +39,4 @@ design pattern questions
     visitor
     mvc
     
+cursor: 0 0

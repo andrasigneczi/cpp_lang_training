@@ -9,7 +9,8 @@
 class CppMemento {
 public:
     CppMemento();
-    void Init();
+    void Load();
+    void Save();
     void dumpStorage();
     
 private:

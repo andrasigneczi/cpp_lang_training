@@ -49,7 +49,7 @@ CppMemento::CppMemento()
    // mStorage.emplace( "sss", std::initializer_list<std::string>{"ee", "bb"} );
 }
 
-void CppMemento::Init() {
+void CppMemento::Load() {
     std::ifstream file( "questionlist.txt", std::ios::in );
     std::string line;
     std::vector<std::string> lines;
@@ -70,12 +70,17 @@ void CppMemento::Init() {
                     lines.clear();
                 }
             } else {
-                // we have a groupName
+                // maybe we have a groupName
                 if(groupName.length() > 0 && lines.size() > 0) {
                     mStorage.emplace( groupName, lines );
                 }
                 groupName = trim(line);
                 lines.clear();
+
+                if(line.substr(0,7) == "cursor:") {
+                    // load the cursor positions
+                    
+                }
             }
     }
     if(groupName.length() > 0 && lines.size() > 0) {
@@ -85,6 +90,9 @@ void CppMemento::Init() {
     for( auto it = mStorage.begin(); it != mStorage.end(); ++it) {
         shuffle(it->second);
     }    
+}
+
+void CppMemento::Save() {
 }
 
 void CppMemento::dumpStorage() {
