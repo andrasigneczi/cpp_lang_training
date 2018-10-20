@@ -1,5 +1,6 @@
 #include <thread>
 #include "CppMemento.h"
+#include <iostream>
 
 /*
 Leírás
@@ -19,7 +20,10 @@ minden kategóriából
 
 int main(int argc, char* argv[]) {
     CppMemento m;
-    m.Load();
+    m.load();
+    m.shuffleByGroup();
     m.dumpStorage();
+    m.save();
+    std::cout << ":: " << m.getStringsAtCursor() << "\n";
     return 0;
 }

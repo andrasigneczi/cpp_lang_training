@@ -1,5 +1,5 @@
-#ifndef __CPPMEMENTO__
-#define __CPPMEMENTO__
+#ifndef __CPPMEMENTO_H__
+#define __CPPMEMENTO_H__
 #pragma once
 
 #include <vector>
@@ -9,16 +9,19 @@
 class CppMemento {
 public:
     CppMemento();
-    void Load();
-    void Save();
+    void load();
+    void save();
     void dumpStorage();
-    
+    void shuffleByGroup();
+    std::string getStringsAtCursor();
+
 private:
-    std::string trim(const std::string& str);
+
     void shuffle( std::vector<std::string>& v);
     
     const std::map<std::string, std::vector<std::string>> mInitialStorage;
     std::map<std::string, std::vector<std::string>> mStorage;
+    std::vector<std::string> mCursorPositions;
 };
 
-#endif // __CPPMEMENTO__
+#endif // __CPPMEMENTO_H__

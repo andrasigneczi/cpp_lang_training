@@ -33,10 +33,10 @@ design pattern questions
     memento
     observer
     state
-    null
+    null object
     strategy
     template
     visitor
     mvc
     
-cursor: 0 0
+cursor: 1 2

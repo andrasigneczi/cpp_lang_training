@@ -3,7 +3,7 @@ CPPFLAGS=-g -std=c++11 -g -Wall -pedantic -Wno-literal-suffix
 LDFLAGS=-g -pthread
 LDLIBS=
 
-SRCS=main.cpp CppMemento.cpp
+SRCS=main.cpp CppMemento.cpp stringutil.cpp
 OBJS=$(subst .cpp,.o,$(SRCS))
 TARGET=cppmemento
 
