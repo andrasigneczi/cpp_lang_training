@@ -16,6 +16,7 @@ minden kategóriából
 -p előző topik választása és kiírása
 -s topikok megkeverése
 -k kidolgozás kiírása
+-h help
 paraméter nélkül: aktuális topikok kiírása
 */
 
@@ -46,6 +47,14 @@ int main(int argc, char* argv[]) {
                 std::cout << m.getStringsAtCursor() << "\n";
             } else if(std::string(argv[i]).compare("-k") == 0) {
                 std::cout << "to be continued...\n";
+            } else if(std::string(argv[i]).compare("-h") == 0) {
+                std::cout << "cppmemento [-n] [-p] [-s] [-k] [-h]\n";
+                std::cout << "\tdisplay recent topics\n";
+                std::cout << "\t-n display next topics\n";
+                std::cout << "\t-p display previous topics\n";
+                std::cout << "\t-s shuffle topicss\n";
+                std::cout << "\t-k display answers\n";
+                std::cout << "\t-h dipslay help\n";
             }
         }
     }
