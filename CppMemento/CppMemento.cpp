@@ -19,12 +19,13 @@ void CppMemento::shuffle( std::vector<std::string>& v)
 
 CppMemento::CppMemento()
 : mInitialStorage {{"a", {"b", "c"}},
-    {"d", {"e", "f", "g"}},} {
+    {"d", {"e", "f", "g"}},},
+mCursorPosition(0) {
    // mStorage.emplace( "sss", std::initializer_list<std::string>{"ee", "bb"} );
 }
 
-void CppMemento::load() {
-    std::ifstream file( "questionlist.txt", std::ios::in );
+void CppMemento::load(std::string fileName) {
+    std::ifstream file( fileName, std::ios::in );
     std::string line;
     std::vector<std::string> lines;
     std::string groupName;
@@ -53,15 +54,13 @@ void CppMemento::load() {
 
                 if(line.substr(0,7) == "cursor:") {
                     // load the cursor positions
-                    mCursorPositions = StringUtil::split(line.substr(7), ' ', true);
-                    std::for_each(std::begin(mCursorPositions), end(mCursorPositions), [](const std::string& x){ std::cout << x << std::endl;});
+                    mCursorPosition = std::stoi(StringUtil::trim(line.substr(7)));
                 }
             }
     }
     if(groupName.length() > 0 && lines.size() > 0) {
         mStorage.emplace( groupName, lines );
     }
-    std::cout << "read line count: " << lines.size() << std::endl;
 }
 
 void CppMemento::shuffleByGroup() {
@@ -71,7 +70,7 @@ void CppMemento::shuffleByGroup() {
     }
 }
 
-void CppMemento::save() {
+void CppMemento::save(std::string fileName) {
     /*
     ios::in	Open for input operations.
     ios::out	Open for output operations.
@@ -81,7 +80,7 @@ void CppMemento::save() {
     ios::app	All output operations are performed at the end of the file, appending the content to the current content of the file.
     ios::trunc	If the file is opened for output operations and it already existed, its previous content is deleted and replaced by the new one.
     */
-    std::ofstream file( "questionlist_copy.txt", std::ios::out | std::ios::trunc );
+    std::ofstream file( fileName, std::ios::out | std::ios::trunc );
     for( auto it = mStorage.begin(); it != mStorage.end(); ++it) {
         file << it->first << std::endl;
         for(auto it2 = it->second.begin(); it2 != it->second.end(); ++it2) {
@@ -90,16 +89,10 @@ void CppMemento::save() {
     }
 
     file << std::endl;
-    file << "cursor: ";
-    for(auto it = mCursorPositions.begin(); it != mCursorPositions.end(); ++it) {
-        file << *it;
-        if(it + 1 != mCursorPositions.end())
-            file << ' ';
-    }
-    file << std::endl;
+    file << "cursor: " << (mCursorPosition % 1000) << std::endl;
 }
 
-void CppMemento::dumpStorage() {
+void CppMemento::dumpStorage() const {
     for( auto it = mStorage.begin(); it != mStorage.end(); ++it) {
         std::cout << "+ " << it->first << "\n";
         for( auto it2 = it->second.begin(); it2 != it->second.end(); ++it2) {
@@ -109,17 +102,13 @@ void CppMemento::dumpStorage() {
 }
 
 std::string CppMemento::getStringsAtCursor() {
-    size_t index = 0;
     std::string retVal;
+    size_t index = 0;
     for( auto it = mStorage.begin(); it != mStorage.end(); ++it) {
-        if(index >= mCursorPositions.size())
-            throw "Illegal cursor position";
-        size_t pos = std::stoul(mCursorPositions[index]);
-        if(pos >= it->second.size())
-            throw "Illegal cursor position";
+        int pos = mCursorPosition % it->second.size();
         if(index > 0)
-            retVal += "; ";
-        retVal += it->first + ": " + it->second[pos];
+            retVal += "\n";
+        retVal += "- " + it->first + ": " + it->second[pos];
         ++index;
     }
     return retVal;

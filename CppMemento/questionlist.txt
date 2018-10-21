@@ -38,5 +38,11 @@ design pattern questions
     template
     visitor
     mvc
-    
-cursor: 1 2
+SQL questions
+    first normal form
+    second normal form
+    third normal form
+    union
+    union all
+
+cursor: 12

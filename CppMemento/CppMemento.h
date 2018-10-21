@@ -9,19 +9,20 @@
 class CppMemento {
 public:
     CppMemento();
-    void load();
-    void save();
-    void dumpStorage();
+    void load(std::string fileName);
+    void save(std::string fileName);
+    void dumpStorage() const;
     void shuffleByGroup();
     std::string getStringsAtCursor();
-
+    void incCursor() {++mCursorPosition;}
+    void decCursor() {--mCursorPosition;}
 private:
 
     void shuffle( std::vector<std::string>& v);
     
     const std::map<std::string, std::vector<std::string>> mInitialStorage;
     std::map<std::string, std::vector<std::string>> mStorage;
-    std::vector<std::string> mCursorPositions;
+    int mCursorPosition;
 };
 
 #endif // __CPPMEMENTO_H__

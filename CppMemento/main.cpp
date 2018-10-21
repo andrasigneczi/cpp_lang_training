@@ -15,15 +15,39 @@ minden kategóriából
 -n következő topik választása és kiírása
 -p előző topik választása és kiírása
 -s topikok megkeverése
-
+-k kidolgozás kiírása
+paraméter nélkül: aktuális topikok kiírása
 */
 
 int main(int argc, char* argv[]) {
-    CppMemento m;
-    m.load();
-    m.shuffleByGroup();
-    m.dumpStorage();
-    m.save();
-    std::cout << ":: " << m.getStringsAtCursor() << "\n";
+    if(argc == 1) {
+        CppMemento m;
+        m.load("questionlist_copy.txt");
+        std::cout << m.getStringsAtCursor() << "\n";
+    } else {
+        for(int i = 0; i < argc; ++i) {
+            if(std::string(argv[i]).compare("-n") == 0) {
+                CppMemento m;
+                m.load("questionlist_copy.txt");
+                m.incCursor();
+                m.save("questionlist_copy.txt");
+                std::cout << m.getStringsAtCursor() << "\n";
+            } else if(std::string(argv[i]).compare("-p") == 0) {
+                CppMemento m;
+                m.load("questionlist_copy.txt");
+                m.decCursor();
+                m.save("questionlist_copy.txt");
+                std::cout << m.getStringsAtCursor() << "\n";
+            } else if(std::string(argv[i]).compare("-s") == 0) {
+                CppMemento m;
+                m.load("questionlist.txt");
+                m.shuffleByGroup();
+                m.save("questionlist_copy.txt");
+                std::cout << m.getStringsAtCursor() << "\n";
+            } else if(std::string(argv[i]).compare("-k") == 0) {
+                std::cout << "to be continued...\n";
+            }
+        }
+    }
     return 0;
 }
