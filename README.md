@@ -1,1 +1,1 @@
-# cpp_lang_taining
+# cpp_lang_training
