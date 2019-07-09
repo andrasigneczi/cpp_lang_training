@@ -25,13 +25,15 @@ c++ std questions
     lambda expressions                          ((https://en.cppreference.com/w/cpp/language/lambda))
     trim a string                               ((e:stringutil.cpp))
     sizeof..., typename..., class..., enable_if<>, forward<>
-    decltyp
+    decltype
     variadic template                           ((https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.3.0/com.ibm.zos.v2r3.cbclx01/variadic_templates.htm))
     greater<int>
     less<int>
     back_inserter
     swap
     adjacent_find
+    Result_of<>
+    move
 design pattern questions
     factory
     abstract factory
@@ -77,6 +79,8 @@ c++ questions
     Overloadig operators
     Pointers and references
     Templates
+    literal operator
+    new, delete operator
 SQL questions
     SQL normal forms
     union, union all

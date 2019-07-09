@@ -53,9 +53,9 @@ class Cooker : public ObserverIF {
 public:
     Cooker() : cookingOn(false) {}
 
-    void cookFor40Seconds() {
+    void cookingTimeInSec(int sec) {
 	cookingOn = true;
-	seconds = 40;
+	seconds = sec;
     }
 
     void notify(SubjectPtr subject) override {
@@ -75,14 +75,18 @@ private:
 int main(int argc, char* argv[]) {
     std::shared_ptr<Clock> clock = std::make_shared<Clock>();
 
-    std::shared_ptr<Cooker> cooker = std::make_shared<Cooker>();
+    std::shared_ptr<Cooker> cooker1 = std::make_shared<Cooker>();
+    std::shared_ptr<Cooker> cooker2 = std::make_shared<Cooker>();
 
-    clock->add(cooker);
+    clock->add(cooker1);
+    clock->add(cooker2);
 
-    cooker->cookFor40Seconds();
+    cooker1->cookingTimeInSec(40);
+    cooker2->cookingTimeInSec(20);
     clock->tick50Times();
 
-    clock->remove(cooker);
+    clock->remove(cooker2);
+    clock->remove(cooker1);
     std::cout << clock->observerNumber() << "\n";
 
     return 0;
