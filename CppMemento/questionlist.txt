@@ -56,18 +56,19 @@ design pattern questions
     memento
     observer
     state
-    null object
+    null object (special case object)
     strategy
     template
     visitor
     mvc
+    money class
 Programming questions
     Big O (Time & space)                        Cracing coding interview 6th Edition, page 50
-    Breadth-First Search
-    Depth-First Search
+    Breadth-First Search                        Cracing coding interview 6th Edition, page 119
+    Depth-First Search                          Cracing coding interview 6th Edition, page 119
     Binary Search
     Merge Sort                                  Cracing coding interview 6th Edition, page 158
-    Quick Sort                                  Cracing coding interview 6th Edition, page 50
+    Quick Sort                                  Cracing coding interview 6th Edition, page 52
     Bubble Sort
     Selection Sort
     Radix Sort

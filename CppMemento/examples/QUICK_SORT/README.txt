@@ -15,3 +15,6 @@ to an O(N²) runtime.
 - Expected Case: Usually, though, these wonderful or terrible situations won't happen. Sure, sometimes
 the pivot will be very low or very high, but it won't happen over and over again. We can expect a runtime
 of O(N log N) .
+
+
+Cracking the Coding Interview page 160
