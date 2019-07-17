@@ -72,3 +72,12 @@ Thumbs.db
 *.exe
 a.out
 questionlist_copy.txt
+CMakeCache.txt
+runTests
+cmake_install.cmake
+CMakeFiles
+cppmemento
+input.txt
+output.txt
+out.txt
+error.txt
