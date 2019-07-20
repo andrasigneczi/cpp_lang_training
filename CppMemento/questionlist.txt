@@ -5,10 +5,7 @@ c++ std questions
     vector
     array
     stack
-    thread
-    future
-    promise
-    task
+    thread, future, promise, packaged_task, async, conditional variable
     chrono
     string
     back_inserter
@@ -86,5 +83,15 @@ SQL questions
     SQL normal forms
     union, union all
     join
+Machine Learning
+    Categories of ML: supervised learning, unsupervised learning, ...
+    anomaly detection
+    kmean
+    linear regression
+    logistic regression
+    support vector machine
+    neural network
+Artificial Intelligence
+    backtrack
 
 cursor: 12
