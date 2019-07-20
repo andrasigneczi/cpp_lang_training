@@ -1,5 +1,5 @@
 CXX=g++
-CPPFLAGS=-g -std=c++11 -g -Wall -pedantic -Wno-literal-suffix
+CPPFLAGS=-g -std=c++11 -g -Wall -pedantic -Wno-literal-suffix -fPIC
 LDFLAGS=-g -pthread
 LDLIBS=
 

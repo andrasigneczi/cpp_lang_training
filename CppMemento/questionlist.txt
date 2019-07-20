@@ -11,6 +11,29 @@ c++ std questions
     task
     chrono
     string
+    back_inserter
+    next_permutation
+    accumulate
+    unordered_set
+    unordered_map
+    aggregate initialization                    ((https://en.cppreference.com/w/cpp/language/aggregate_initialization))
+    copy_if                                     ((e:examples/str.cpp))
+    fill
+    ostream_iterator                            ((e:examples/str.cpp))
+    bit operations
+    split a string                              ((https://www.fluentcpp.com/2017/04/21/how-to-split-a-string-in-c/))
+    lambda expressions                          ((https://en.cppreference.com/w/cpp/language/lambda))
+    trim a string                               ((e:stringutil.cpp))
+    sizeof..., typename..., class..., enable_if<>, forward<>
+    decltype
+    variadic template                           ((https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.3.0/com.ibm.zos.v2r3.cbclx01/variadic_templates.htm))
+    greater<int>
+    less<int>
+    back_inserter
+    swap
+    adjacent_find
+    Result_of<>
+    move
 design pattern questions
     factory
     abstract factory
@@ -33,16 +56,35 @@ design pattern questions
     memento
     observer
     state
-    null object
+    null object (special case object)
     strategy
     template
     visitor
     mvc
+    money class
+Programming questions
+    Big O (Time & space)                        Cracing coding interview 6th Edition, page 50
+    Breadth-First Search                        Cracing coding interview 6th Edition, page 119
+    Depth-First Search                          Cracing coding interview 6th Edition, page 119
+    Binary Search
+    Merge Sort                                  Cracing coding interview 6th Edition, page 158
+    Quick Sort                                  Cracing coding interview 6th Edition, page 52
+    Bubble Sort
+    Selection Sort
+    Radix Sort
+c++ questions
+    Inheritence
+    Constructors and detructors
+    Virtual functions
+    Virtul destructor
+    Overloadig operators
+    Pointers and references
+    Templates
+    literal operator
+    new, delete operator
 SQL questions
-    first normal form
-    second normal form
-    third normal form
-    union
-    union all
+    SQL normal forms
+    union, union all
+    join
 
 cursor: 12
