@@ -20,21 +20,26 @@ public:
 	std::cout << "Move assignment\n";
 	return *this;
     }
-
+    void operator()(){}
 };
 
-template<class T> Example factory(T&& arg) {
+template<class T>
+Example factory(T&& arg) {
     return Example(std::forward<T>(arg));
 } 
 
 int main(int argc, char* argv[]) {
     Example a;
-    Example b = a;
-    Example c(b);
-    a = c;
-    a = std::move(c);
+    Example b = a; // copy
+    Example c(b); // copy
+    a = c; // copy assignment
+    a = std::move(c); // move assignment
 
-    factory(c);
-    factory(std::move(c));
+    Example f = factory(c); // copy
+    c = factory(f); // copy, move assignment
+
+    Example d = factory(std::move(c)); // move
+    c = factory(std::move(d)); // move, move assignment
+
     return 0;
 }

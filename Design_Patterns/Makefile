@@ -1,17 +1,21 @@
 all: subdirs
 
 subdirs:
-	make -C Mediator
-	make -C Decorator
-	make -C Bridge
-	make -C Facade
-	make -C Adapter
-	make -C ChainOfResponsibility
+	$(MAKE) -C Mediator
+	$(MAKE) -C Decorator
+	$(MAKE) -C Bridge
+	$(MAKE) -C Facade
+	$(MAKE) -C Adapter
+	$(MAKE) -C ChainOfResponsibility
+	$(MAKE) -C Factory
+	$(MAKE) -C AbstractFactory
 
 clean:
-	make -C Mediator clean
-	make -C Decorator clean
-	make -C Bridge clean
-	make -C Facade clean
-	make -C Adapter clean
-	make -C ChainOfResponsibility clean
+	$(MAKE) -C Mediator clean
+	$(MAKE) -C Decorator clean
+	$(MAKE) -C Bridge clean
+	$(MAKE) -C Facade clean
+	$(MAKE) -C Adapter clean
+	$(MAKE) -C ChainOfResponsibility clean
+	$(MAKE) -C Factory clean
+	$(MAKE) -C AbstractFactory clean

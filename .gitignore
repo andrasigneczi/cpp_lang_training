@@ -80,3 +80,7 @@ input.txt
 output.txt
 out.txt
 error.txt
+
+CppMemento/examples/BINARY_SEARCH/Makefile
+CppMemento/examples/QUICK_SORT/Makefile
+CppMemento/examples/SELECTION_SORT/Makefile
