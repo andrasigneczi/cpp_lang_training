@@ -84,3 +84,11 @@ error.txt
 CppMemento/examples/BINARY_SEARCH/Makefile
 CppMemento/examples/QUICK_SORT/Makefile
 CppMemento/examples/SELECTION_SORT/Makefile
+Design_Patterns/AbstractFactory/AbstractFactory
+Design_Patterns/Adapter/Adapter
+Design_Patterns/Bridge/Bridge
+Design_Patterns/ChainOfResponsibility/ChainOfResponsibility
+Design_Patterns/Decorator/Decorator
+Design_Patterns/Facade/Facade
+Design_Patterns/Factory/Factory
+Design_Patterns/Mediator/Mediator

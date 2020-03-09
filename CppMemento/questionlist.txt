@@ -79,6 +79,7 @@ c++ questions
     Templates
     literal operator
     new, delete operator
+    default_delete                                    ((https://en.cppreference.com/w/cpp/memory/default_delete))
 SQL questions
     SQL normal forms
     union, union all
