@@ -52,9 +52,9 @@ int main(int argc, char* argv[]) {
                 std::cout << "\tdisplay recent topics\n";
                 std::cout << "\t-n display next topics\n";
                 std::cout << "\t-p display previous topics\n";
-                std::cout << "\t-s shuffle topicss\n";
+                std::cout << "\t-s shuffle topics\n";
                 std::cout << "\t-k display answers\n";
-                std::cout << "\t-h dipslay help\n";
+                std::cout << "\t-h display help\n";
             }
         }
     }
