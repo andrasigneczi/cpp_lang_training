@@ -77,9 +77,11 @@ c++ questions
     Overloadig operators
     Pointers and references
     Templates
-    literal operator
+    literal operator, ++ operator
     new, delete operator
     default_delete                                    ((https://en.cppreference.com/w/cpp/memory/default_delete))
+    rvalue, lvalue, std::move_forward
+    maybe_unused (c++17)
 SQL questions
     SQL normal forms
     union, union all
