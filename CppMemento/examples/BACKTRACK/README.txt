@@ -4,7 +4,9 @@ https://www.geeksforgeeks.org/backtracking-algorithms/
 init
 while(true)
     path = genNextPath
-    if(!path.isValid() isGoal(path))
+    if(!path.isValid())
+	break
+    if(isGoal(path))
 	return path
 
 // search all solutions

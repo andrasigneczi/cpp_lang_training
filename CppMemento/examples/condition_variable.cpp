@@ -74,7 +74,7 @@ void consume() {
     try {
         while( true ) {
             Message m = syncQueue.get( chrono::milliseconds(300));
-            cout << m.getName() << endl;
+            cout << "consume: " << m.getName() << endl;
         }
     }
     catch( system_error& e ) {
