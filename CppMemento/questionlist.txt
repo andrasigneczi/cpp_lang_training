@@ -31,6 +31,7 @@ c++ std questions
     adjacent_find
     Result_of<>
     move
+    optional<T>                                  (Clean C++, page 259)
 design pattern questions
     factory
     abstract factory
@@ -82,6 +83,7 @@ c++ questions
     default_delete                                    ((https://en.cppreference.com/w/cpp/memory/default_delete))
     rvalue, lvalue, std::move_forward
     maybe_unused (c++17)
+    noexcept                                          (https://www.modernescpp.com/index.php/c-core-guidelines-the-noexcept-specifier-and-operator)
 SQL questions
     SQL normal forms
     union, union all
