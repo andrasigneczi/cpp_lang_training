@@ -32,6 +32,12 @@ c++ std questions
     Result_of<>
     move
     optional<T>                                  (Clean C++, page 259)
+    result_type
+    is_same
+    remove_cv, remove_const, remove_volatile, remove_cvref
+    add_cv, add_const, add_volatile
+    remove_reference
+    tuple
 design pattern questions
     factory
     abstract factory
