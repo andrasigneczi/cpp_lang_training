@@ -34,10 +34,13 @@ c++ std questions
     optional<T>                                  (Clean C++, page 259)
     result_type
     is_same
-    remove_cv, remove_const, remove_volatile, remove_cvref
+    remove_cv, remove_const, remove_volatile, remove_cvref, decay
     add_cv, add_const, add_volatile
     remove_reference
     tuple
+    common_type					https://en.cppreference.com/w/cpp/types/common_type
+    apply, tuple				https://en.cppreference.com/w/cpp/utility/apply
+    visit					https://en.cppreference.com/w/cpp/utility/variant/visit
 design pattern questions
     factory
     abstract factory
@@ -90,6 +93,8 @@ c++ questions
     rvalue, lvalue, std::move_forward
     maybe_unused (c++17)
     noexcept                                          (https://www.modernescpp.com/index.php/c-core-guidelines-the-noexcept-specifier-and-operator)
+    [[nodiscard]]				wether the return value was checked or not
+    Structure binding				https://en.cppreference.com/w/cpp/language/structured_binding
 SQL questions
     SQL normal forms
     union, union all

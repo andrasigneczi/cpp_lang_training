@@ -1,5 +1,5 @@
 Quick sort picks a random element as a "pivot" and then
-swaps values in the array such that the elements less than pivot appea r before elements greater than pivot.
+swaps values in the array such that the elements less than pivot appear before elements greater than pivot.
 This gives a "partial sort:'Then it recursively sorts the left and right sides using a similar process.
 
 - Best Case: If all elements are equal, then quick sort will, on average, just traverse through the array once.
